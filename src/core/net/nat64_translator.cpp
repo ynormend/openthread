@@ -656,6 +656,7 @@ void Translator::UpdateState(bool aAlwaysNotify)
 
     if (aAlwaysNotify)
     {
+        mState = newState;
         Get<Notifier>().Signal(kEventNat64TranslatorStateChanged);
     }
     else
